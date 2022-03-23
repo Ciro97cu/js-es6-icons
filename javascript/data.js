@@ -1,4 +1,5 @@
 // ~~~~~~~~~~ START FUNCTIONS ~~~~~~~~~~
+// funzione per generare un colore random
 function generateRandomColor() {
 	let letters = '0123456789ABCDEF';
 	let color = '#';
