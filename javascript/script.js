@@ -47,7 +47,4 @@ choices.addEventListener("change", (event) => {
 
 });
 
-
-function filterByType()
-
 arrayIcons.forEach((elements) => createBox(elements));
