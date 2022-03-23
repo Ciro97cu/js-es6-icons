@@ -14,8 +14,6 @@ esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compr
 tra 0 e 9 e A e F.
 2- popolare le options della select della milestone 3 dinamicamente. */
 
-const container = document.getElementById("row_icons");
-
 function createBox(elements) {
     let box = document.createElement("div");
     box.classList.add("col-2", "py-4", "text-center", "rounded-3");
@@ -28,5 +26,28 @@ function createBox(elements) {
         </div>`
     container.appendChild(box);
 }
+
+const container = document.getElementById("row_icons");
+
+let choices = document.getElementById("icons");
+
+choices.addEventListener("change", (event) => {
+
+    container.innerHTML = "";
+
+    if (event.target.value === "all") {
+        arrayIcons.forEach((elements) => createBox(elements));
+    } else if (event.target.value === "animal") {
+        arrayIcons.filter((icone) => icone.type === "animal").forEach((elements) => createBox(elements));
+    } else if (event.target.value === "vegetable") {
+        arrayIcons.filter((icone) => icone.type === "vegetable").forEach((elements) => createBox(elements));
+    } else {
+        arrayIcons.filter((icone) => icone.type === "user").forEach((elements) => createBox(elements));
+    }
+
+});
+
+
+function filterByType()
 
 arrayIcons.forEach((elements) => createBox(elements));
