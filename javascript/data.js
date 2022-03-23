@@ -1,3 +1,4 @@
+// ~~~~~~~~~~ START FUNCTIONS ~~~~~~~~~~
 function generateRandomColor() {
 	let letters = '0123456789ABCDEF';
 	let color = '#';
@@ -6,7 +7,9 @@ function generateRandomColor() {
 	}
 	return color;
 }
+// ~~~~~~~~~~ END FUNCTIONS ~~~~~~~~~~
 
+// array di icone
 const arrayIcons = [
 	{
 		name: 'cat',

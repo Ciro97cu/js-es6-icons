@@ -14,6 +14,7 @@ esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compr
 tra 0 e 9 e A e F.
 2- popolare le options della select della milestone 3 dinamicamente. */
 
+// ~~~~~~~~~~ START FUNCTIONS ~~~~~~~~~~
 function createBox(elements) {
     let box = document.createElement("div");
     box.classList.add("col-2", "py-4", "text-center", "rounded-3");
@@ -35,6 +36,14 @@ function filterIcons(arrayObj, value) {
     return arrayObj.filter((icone) => icone.type === value)
 }
 
+function creationOption(elementValue) {
+    let option = document.createElement("option");
+    option.setAttribute("value", `${elementValue}`);
+    option.innerText = `${elementValue}`;
+    choices.appendChild(option);
+}
+// ~~~~~~~~~~ END FUNCTIONS ~~~~~~~~~~
+
 const container = document.getElementById("row_icons");
 
 const choices = document.getElementById("icons");
@@ -43,19 +52,21 @@ choices.addEventListener("change", (event) => {
 
     container.innerHTML = "";
 
-    if (event.target.value === "all") {
+    let verify = event.target.value;
+    if (verify === "all") {
         generationIcons(arrayIcons);
-    } else if (event.target.value === "animal") {
-        let value = filterIcons(arrayIcons, "animal");
-        generationIcons(value);
-    } else if (event.target.value === "vegetable") {
-        let value = filterIcons(arrayIcons, "vegetable");
-        generationIcons(value);
     } else {
-        let value = filterIcons(arrayIcons, "user");
+        let value = filterIcons(arrayIcons, verify);
         generationIcons(value);
     }
 
 });
 
 generationIcons(arrayIcons);
+
+
+const arrayOptionValue = ["all", "animal", "vegetable", "user"]
+
+arrayOptionValue.forEach((elementValue) => {
+    creationOption(elementValue);
+})
