@@ -19,7 +19,7 @@ function createBox(elements) {
     box.classList.add("col-2", "py-4", "text-center", "rounded-3");
     box.innerHTML = `
         <div>
-            <i class="${elements.family} fa-2x ${elements.prefix}${elements.name} ${elements.color}"></i>
+            <i style="color: ${elements.color};" class="${elements.family} fa-2x ${elements.prefix}${elements.name}"></i>
         </div>
         <div>
             <p>${elements.name}</p>

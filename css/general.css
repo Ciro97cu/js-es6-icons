@@ -12,18 +12,6 @@
     --grey-card: #f5f5f5;
 }
 
-.orange {
-    color: orange;
-}
-
-.blue {
-    color: navy;
-}
-
-.green {
-    color: green;
-}
-
 h1, h2, h3, h4,  h5, h6, p {
     margin: 0;
     padding: 0;
