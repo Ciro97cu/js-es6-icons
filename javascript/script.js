@@ -18,7 +18,7 @@ const container = document.getElementById("row_icons");
 
 function createBox(elements) {
     let box = document.createElement("div");
-    box.classList.add("col-auto", "py-3", "px-5", "text-center", "rounded-3");
+    box.classList.add("col-2", "py-4", "text-center", "rounded-3");
     box.innerHTML = `
         <div>
             <i class="${elements.family} fa-2x ${elements.prefix}${elements.name} ${elements.color}"></i>
