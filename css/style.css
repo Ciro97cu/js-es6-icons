@@ -1,0 +1,18 @@
+h1 {
+    color: var(--sky_blue);
+    font-weight: 900;
+}
+
+.selection_container {
+    background-color: var(--sky_blue);
+    color: white;
+    font-weight: 500;
+}
+
+#container_icons {
+    background-color: var(--grey);
+}
+
+.col-auto {
+    background-color: var(--grey-card);
+}
