@@ -27,24 +27,35 @@ function createBox(elements) {
     container.appendChild(box);
 }
 
+function generationIcons(arrayObj) {
+    arrayObj.forEach((elements) => createBox(elements));
+}
+
+function filterIcons(arrayObj, value) {
+    return arrayObj.filter((icone) => icone.type === value)
+}
+
 const container = document.getElementById("row_icons");
 
-let choices = document.getElementById("icons");
+const choices = document.getElementById("icons");
 
 choices.addEventListener("change", (event) => {
 
     container.innerHTML = "";
 
     if (event.target.value === "all") {
-        arrayIcons.forEach((elements) => createBox(elements));
+        generationIcons(arrayIcons);
     } else if (event.target.value === "animal") {
-        arrayIcons.filter((icone) => icone.type === "animal").forEach((elements) => createBox(elements));
+        let value = filterIcons(arrayIcons, "animal");
+        generationIcons(value);
     } else if (event.target.value === "vegetable") {
-        arrayIcons.filter((icone) => icone.type === "vegetable").forEach((elements) => createBox(elements));
+        let value = filterIcons(arrayIcons, "vegetable");
+        generationIcons(value);
     } else {
-        arrayIcons.filter((icone) => icone.type === "user").forEach((elements) => createBox(elements));
+        let value = filterIcons(arrayIcons, "user");
+        generationIcons(value);
     }
 
 });
 
-arrayIcons.forEach((elements) => createBox(elements));
+generationIcons(arrayIcons);
