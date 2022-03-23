@@ -13,6 +13,7 @@ h1 {
     background-color: var(--grey);
 }
 
-.col-2 {
+.col-sm-3,
+.col-md-2 {
     background-color: var(--grey-card);
 }

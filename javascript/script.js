@@ -20,7 +20,7 @@ function createBox(elements) {
     // creo il mio div
     let box = document.createElement("div");
     // gli attribuisco delle classi già preparate da me in precedenza
-    box.classList.add("col-2", "py-4", "text-center", "rounded-3");
+    box.classList.add("col-sm-3", "col-md-2", "py-4", "text-center", "rounded-3");
     // inserisco il restante contenuto con innerHTML
     box.innerHTML = `
     <div>
