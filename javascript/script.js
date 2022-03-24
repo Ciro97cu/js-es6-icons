@@ -82,4 +82,4 @@ choices.addEventListener("change", (event) => {
 });
 
 // ciclo in base agli elementi degli array della selection
-arrayOptionValue.forEach(elementValue => creationOption(elementValue))
+arrayOptionValue.forEach(elementValue => creationOption(elementValue));
