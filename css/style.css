@@ -3,13 +3,17 @@ h1 {
     font-weight: 900;
 }
 
+p {
+    font-weight: 600;
+}
+
 .selection_container {
     background-color: var(--sky_blue);
     color: white;
     font-weight: 500;
 }
 
-#container_icons {
+body {
     background-color: var(--grey);
 }
 

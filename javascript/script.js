@@ -61,7 +61,7 @@ const container = document.getElementById("row_icons");
 // creo una variabile per selezionare il select
 const choices = document.getElementById("icons");
 // creo un array da cui andare a prendere i valori delle mie option
-const arrayOptionValue = ["all", "animal", "vegetable", "user"]
+const arrayOptionValue = ["all", "animal", "vegetable", "user"];
 
 // genero di default sempre tutte le icone
 generationIcons(arrayIcons);
